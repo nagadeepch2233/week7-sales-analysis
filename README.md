@@ -1,4 +1,4 @@
- Week 7 Sales Analysis Project
+  Sales Data Analysis System
 
  Project Overview
 This project is a "Sales Data Analysis And Reporting System". 
