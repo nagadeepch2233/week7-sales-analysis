@@ -4,9 +4,9 @@
 This project is a "Sales Data Analysis And Reporting System". 
 
 It includes modules for:
-- Loading sales data (`CSV`/`XLSX`)
+- Loading sales data ('CSV')
 - Cleaning & preprocessing
 - Basic and advanced analysis
 - Visualization
-- Report generation (CSV & Excel)
+- Report generation (CSV)
 
