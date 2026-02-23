@@ -7,11 +7,12 @@ TEST_FILE = os.path.join("data", "raw", "sales_data.csv")
 
 def test_load_csv_file():
     df = load_data(TEST_FILE)
-    assert isinstance(df, pd.DataFrame), "Output should be a pandas DataFrame"
-    assert not df.empty, "DataFrame should not be empty"
+    
+    assert isinstance(df, pd.DataFrame)
+    assert df.shape[0] == 10  # 10 rows in sample data
     required_cols = ["OrderID", "OrderDate", "CustomerID", "Product", "Category", "Quantity", "Price", "Region"]
     for col in required_cols:
-        assert col in df.columns, f"Missing column: {col}"
+        assert col in df.columns
 
 def test_file_not_found():
     with pytest.raises(FileNotFoundError):
@@ -19,6 +20,6 @@ def test_file_not_found():
 
 def test_unsupported_format(tmp_path):
     tmp_file = tmp_path / "data.txt"
-    tmp_file.write_text("test")
+    tmp_file.write_text("sample")
     with pytest.raises(ValueError):
-        load_data(str(tmp_file))
+        load_data(str(tmp_file))))
