@@ -1,0 +1,4 @@
+#tests
+-test data_loader
+-test data_cleaner
+-test analyzer
