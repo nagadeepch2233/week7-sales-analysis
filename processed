@@ -1,0 +1,1 @@
+df.to_csv("../data/processed/cleaned_sales_data.csv", index=False)
